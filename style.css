@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*single product details*/
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+    text-align: left;
+}
+
+.single-product select{/*styling size dropdown*/
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold; 
+
+}
+
+.single-product input{/*style no of products input*/
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ff523b;
+}
+input:focus{
+    outline: none;
+}
+.single-product .fa{/*styling icon with product details h3*/
+    color: #ff523b;
+    margin-left: 10px;
+}
+.small-img-row{
+    display: flex;/*make all 4 images flexible*/
+    justify-content: space-between;/*this will make all 4 images to take equal available space in single line without any gap, mean 25% each col, and to place gap between each col, we call col below and made 24% so to have a gap*/
+}
+.small-img-col{
+    flex-basis: 24%;/*this will make each column to take 24% space and 1% gap*/
+}
+.single-product .col-2 p{
+    margin-left: 0px;
+}
+.single-product .col-2 h1{
+    margin-left: 0px;
+}
+
+
+
+
+
+/*----------media query for each and every item display on mobile or screen size less than 600px---------------*/
+
+@media only screen and (max-width: 600px){
+
+    .row{/*this is the row which we have used in every section*/
+        text-align: center;/*when open on mobile, we make text in every row to be center align*/
+    }
+    .col-2, .col-3,.col-4{/*for all columns view on mobile, we want one column single line occupying 100% width we not want 3 or 4 in single line*/
+        flex-basis: 100%;
+    }
+    /*for single product detail page*/
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px;
+    }
+    .single-product h1{
+        font-size: 26px;
+        line-height: 26px;
+    }
+    /*for cart page*/
+    .cart-info p{
+        display:none;/*hide product name in smaller screen*/
+    }
+
+}
